@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ta5il4fdv36l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx72c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejs6y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l360n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upytv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkboh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+custom_menu_button/base_type = &"Button"
+custom_menu_button/colors/font_color = Color(1, 1, 1, 1)
+custom_menu_button/colors/font_hover_color = Color(0.355016, 0.799862, 0.735278, 1)
+custom_menu_button/colors/font_hover_pressed_color = Color(0, 0, 0, 0)
+custom_menu_button/colors/font_pressed_color = Color(0, 0, 0, 0)
+custom_menu_button/font_sizes/font_size = 32
+custom_menu_button/styles/focus = SubResource("StyleBoxFlat_rx72c")
+custom_menu_button/styles/hover = SubResource("StyleBoxFlat_ejs6y")
+custom_menu_button/styles/hover_pressed = SubResource("StyleBoxFlat_l360n")
+custom_menu_button/styles/normal = SubResource("StyleBoxFlat_upytv")
+custom_menu_button/styles/pressed = SubResource("StyleBoxFlat_xkboh")
