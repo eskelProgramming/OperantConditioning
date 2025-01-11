@@ -1,16 +1,7 @@
-[gd_scene format=3 uid="uid://dfmlhdxlly27y"]
+[gd_scene load_steps=2 format=3 uid="uid://dfmlhdxlly27y"]
+
+[ext_resource type="PackedScene" uid="uid://8yv7mac3vwdg" path="res://Assets/tile_map_layers/test_tile_map_layer.tscn" id="1_defu5"]
 
 [node name="test_level" type="Node"]
 
-[node name="Panel" type="PanelContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 2
-text = "Test Level"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TileMapLayer" parent="." instance=ExtResource("1_defu5")]
