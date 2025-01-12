@@ -15,6 +15,10 @@ run/main_scene="res://ui/scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelManager="*res://scripts/managers/level_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -46,6 +50,12 @@ jump={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="mac"
+2d_physics/layer_2="boundary"
+2d_physics/layer_3="ground"
 
 [rendering]
 
