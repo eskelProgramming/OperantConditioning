@@ -1,7 +1,7 @@
 
 extends CanvasLayer
 
-const main_scene: PackedScene = preload('res://scenes/test_level.tscn')
+const main_scene: PackedScene = preload('res://scenes/levels/test_level.tscn')
 
 @onready var new_game = $menu/margin_container/inner_background/inner_container/button_container/Button
 @onready var quit = $menu/margin_container/inner_background/inner_container/button_container4/Button

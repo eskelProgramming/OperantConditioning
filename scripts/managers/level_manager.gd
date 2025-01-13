@@ -22,7 +22,7 @@ func load_level(level_id : int) -> void:
 		print("level_data is null")
 		return
 		
-	var level_path = "res://scenes/%s.tscn" % level_data.level_path
+	var level_path = "res://scenes/levels/%s.tscn" % level_data.level_path
 	var level_res := load(level_path)
 	
 	if level_res:
