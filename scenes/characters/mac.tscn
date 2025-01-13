@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgrkxvfnxh4sd"]
 
 [ext_resource type="Script" path="res://scripts/characters/mac.gd" id="1_q4o5q"]
-[ext_resource type="Texture2D" uid="uid://bvlrgrb4s0uld" path="res://assets/characters/mac/mac_front.png" id="2_eexpb"]
+[ext_resource type="Texture2D" uid="uid://bvlrgrb4s0uld" path="res://Assets/characters/mac/mac_front.png" id="2_eexpb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnj"]
 size = Vector2(16, 18)
@@ -16,3 +16,10 @@ texture = ExtResource("2_eexpb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.125)
 shape = SubResource("RectangleShape2D_vgcnj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(251, -90)
+zoom = Vector2(2.425, 2.425)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+rotation_smoothing_enabled = true
