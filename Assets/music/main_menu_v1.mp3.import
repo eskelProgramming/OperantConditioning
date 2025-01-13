@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dycibiakysli1"
-path="res://.godot/imported/main_menu_v1.mp3-80d19e0e81cfe3ae80514fda9db2f7ca.mp3str"
+path="res://.godot/imported/main_menu_v1.mp3-a68b515937f160b77d20be0c836bd16c.mp3str"
 
 [deps]
 
-source_file="res://Assets/music/main_menu_v1.mp3"
-dest_files=["res://.godot/imported/main_menu_v1.mp3-80d19e0e81cfe3ae80514fda9db2f7ca.mp3str"]
+source_file="res://assets/music/main_menu_v1.mp3"
+dest_files=["res://.godot/imported/main_menu_v1.mp3-a68b515937f160b77d20be0c836bd16c.mp3str"]
 
 [params]
 

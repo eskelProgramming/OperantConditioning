@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="OperantConditioning"
-run/main_scene="res://ui/main.tscn"
+run/main_scene="res://ui/scripts/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/misc/icon.svg"
 
 [autoload]
 
