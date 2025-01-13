@@ -1,3 +1,4 @@
+class_name Mac
 extends CharacterBody2D
 
 
@@ -37,3 +38,5 @@ func handle_danger() -> void:
 	
 func reset_mac() -> void:
 	global_position = LevelManager.loaded_level.level_start_position.global_position
+	visible = true
+	can_control = true

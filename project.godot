@@ -54,8 +54,9 @@ jump={
 [layer_names]
 
 2d_physics/layer_1="mac"
-2d_physics/layer_2="boundary"
-2d_physics/layer_3="ground"
+2d_physics/layer_2="danger"
+2d_physics/layer_3="static"
+2d_physics/layer_4="dynamic"
 
 [rendering]
 
