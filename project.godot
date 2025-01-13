@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="OperantConditioning"
-run/main_scene="res://ui/scenes/main_menu.tscn"
+run/main_scene="res://ui/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelManager="*res://scripts/managers/level_manager.gd"
 
 [display]
 
@@ -46,6 +50,13 @@ jump={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="mac"
+2d_physics/layer_2="danger"
+2d_physics/layer_3="static"
+2d_physics/layer_4="dynamic"
 
 [rendering]
 

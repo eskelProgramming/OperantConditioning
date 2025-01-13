@@ -1,3 +1,4 @@
+
 extends CanvasLayer
 
 const main_scene: PackedScene = preload('res://scenes/test_level.tscn')
@@ -14,10 +15,22 @@ func load_main_menu():
 	quit.connect('pressed', _on_quit_pressed)
 	
 func _on_new_game_pressed() -> void:
-	var game = self.get_parent()
-	self.queue_free()
-	var world_scene = main_scene.instantiate()
-	game.add_child(world_scene)
+	LevelManager.load_level(1)
+	deactivate()
 	
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+func deactivate() -> void:
+	hide()
+	set_process(false)
+	set_physics_process(false)
+	set_process_unhandled_input(false)
+	set_process_input(false)
+
+func activate() -> void:
+	show()
+	set_process(true)
+	set_physics_process(true)
+	set_process_unhandled_input(true)
+	set_process_input(true)
