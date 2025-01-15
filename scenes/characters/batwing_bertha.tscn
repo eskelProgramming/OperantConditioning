@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnkn03qr2xh5"]
+
+[ext_resource type="Script" path="res://scripts/characters/batwing_bertha.gd" id="1_0d4kd"]
+[ext_resource type="Texture2D" uid="uid://cbwr4uxaso1yn" path="res://Assets/characters/batwing_bertha/batwing_bertha_front.png" id="1_kcrwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gh6r"]
+size = Vector2(14.5718, 7.27948)
+
+[node name="BatwingBertha" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_0d4kd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_kcrwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(1.06, 1.06)
+shape = SubResource("RectangleShape2D_2gh6r")
