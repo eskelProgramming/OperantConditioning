@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1qnsr87bnmwv"]
-
-[ext_resource type="Script" path="res://scripts/characters/batwing_bertha/batwing_bertha_start.gd" id="1_78280"]
-
-[node name="BatwingBerthaStart" type="Node2D"]
-script = ExtResource("1_78280")
