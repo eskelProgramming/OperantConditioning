@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dfmlhdxlly27y"]
+[gd_scene load_steps=8 format=4 uid="uid://dfmlhdxlly27y"]
 
 [ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_juv5w"]
 [ext_resource type="PackedScene" uid="uid://8yv7mac3vwdg" path="res://Assets/tile_map_layers/test_tile_map_layer.tscn" id="2_3nsqv"]
@@ -9,8 +9,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlvp8"]
 size = Vector2(10488, 118)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig26h"]
 
 [node name="test_level" type="Node2D" node_paths=PackedStringArray("level_start_position")]
 script = ExtResource("1_juv5w")
@@ -57,26 +55,7 @@ move_speed = 40.0
 [node name="End" type="Node2D" parent="BatwingBertha2"]
 position = Vector2(0, -101)
 
-[node name="MagmaJimmy" parent="." node_paths=PackedStringArray("mac", "left_boundary", "right_boundary") instance=ExtResource("6_ynhcb")]
+[node name="MagmaJimmy" parent="." node_paths=PackedStringArray("mac") instance=ExtResource("6_ynhcb")]
 position = Vector2(1165, 879)
 mac = NodePath("../mac")
 speed = 30.0
-left_boundary = NodePath("Left")
-right_boundary = NodePath("Right")
-
-[node name="Left" type="Area2D" parent="MagmaJimmy"]
-
-[node name="Left" type="CollisionShape2D" parent="MagmaJimmy/Left"]
-position = Vector2(-232, -3)
-shape = SubResource("RectangleShape2D_ig26h")
-
-[node name="Right" type="Area2D" parent="MagmaJimmy"]
-
-[node name="Right" type="CollisionShape2D" parent="MagmaJimmy/Right"]
-position = Vector2(1092, -3)
-shape = SubResource("RectangleShape2D_ig26h")
-
-[connection signal="body_entered" from="MagmaJimmy/Left" to="MagmaJimmy" method="_on_left_body_entered"]
-[connection signal="body_exited" from="MagmaJimmy/Left" to="MagmaJimmy" method="_on_left_body_exited"]
-[connection signal="body_entered" from="MagmaJimmy/Right" to="MagmaJimmy" method="_on_right_body_entered"]
-[connection signal="body_exited" from="MagmaJimmy/Right" to="MagmaJimmy" method="_on_right_body_exited"]

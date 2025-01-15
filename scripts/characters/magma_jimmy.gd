@@ -3,8 +3,6 @@ extends CharacterBody2D
 
 @export var mac : Mac
 @export var speed : float
-@export var left_boundary : Area2D
-@export var right_boundary : Area2D
 
 var can_move_left = true
 var can_move_right = true
