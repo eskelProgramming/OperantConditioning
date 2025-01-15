@@ -57,6 +57,7 @@ jump={
 2d_physics/layer_2="danger"
 2d_physics/layer_3="static"
 2d_physics/layer_4="dynamic"
+2d_physics/layer_5="ground"
 
 [rendering]
 

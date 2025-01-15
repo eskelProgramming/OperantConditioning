@@ -11,9 +11,9 @@
 size = Vector2(10488, 118)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oxg3a"]
-vertices = PackedVector2Array(610.539, 20.6328, 277.148, 33.9766, 67.5469, 20.2188)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-241, 10, 1101, 11, 277, 44)])
+vertices = PackedVector2Array(1092, 118, -232, 118, -232, 21, 1092, 21)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-242, 11, 1102, 11, 1102, 128, -242, 128)])
 
 [node name="test_level" type="Node2D" node_paths=PackedStringArray("level_start_position")]
 script = ExtResource("1_juv5w")
@@ -60,14 +60,23 @@ move_speed = 40.0
 [node name="End" type="Node2D" parent="BatwingBertha2"]
 position = Vector2(0, -101)
 
-[node name="MagmaJimmy" parent="." node_paths=PackedStringArray("mac", "navigation_agent", "navigation_region") instance=ExtResource("6_ynhcb")]
-position = Vector2(1165, 875)
+[node name="MagmaJimmy" parent="." node_paths=PackedStringArray("mac", "navigation_agent", "navigation_region", "ray_left", "ray_right") instance=ExtResource("6_ynhcb")]
+position = Vector2(1165, 878)
 mac = NodePath("../mac")
 speed = 15.0
 navigation_agent = NodePath("NavigationAgent2D")
 navigation_region = NodePath("NavigationRegion2D")
+ray_left = NodePath("RayCastLeft")
+ray_right = NodePath("RayCastRight")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="MagmaJimmy"]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="MagmaJimmy"]
 navigation_polygon = SubResource("NavigationPolygon_oxg3a")
+
+[node name="RayCastRight" type="RayCast2D" parent="MagmaJimmy"]
+target_position = Vector2(7, 6)
+collision_mask = 17
+
+[node name="RayCastLeft" type="RayCast2D" parent="MagmaJimmy"]
+target_position = Vector2(-7, 6)
