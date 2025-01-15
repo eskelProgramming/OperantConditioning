@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8yv7mac3vwdg" path="res://Assets/tile_map_layers/test_tile_map_layer.tscn" id="2_3nsqv"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_7j4d8"]
 [ext_resource type="PackedScene" uid="uid://dgrkxvfnxh4sd" path="res://scenes/characters/mac.tscn" id="4_t81aw"]
-[ext_resource type="PackedScene" uid="uid://bnkn03qr2xh5" path="res://scenes/characters/batwing_bertha/batwing_bertha.tscn" id="5_u4g2p"]
+[ext_resource type="PackedScene" uid="uid://bnkn03qr2xh5" path="res://scenes/characters/batwing_bertha.tscn" id="5_u4g2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlvp8"]
 size = Vector2(10488, 118)
