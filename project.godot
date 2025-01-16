@@ -18,6 +18,8 @@ config/icon="res://assets/misc/icon.svg"
 [autoload]
 
 LevelManager="*res://scripts/managers/level_manager.gd"
+LifeManager="*res://scripts/managers/life_manager.gd"
+CoinManager="*res://scripts/managers/coin_manager.gd"
 
 [display]
 
