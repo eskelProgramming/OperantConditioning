@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://rqh350ruhebr"]
 
 [ext_resource type="Script" path="res://scripts/characters/magma_jimmy.gd" id="1_mrb55"]
-[ext_resource type="Texture2D" uid="uid://bx7k0v55fstth" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
+[ext_resource type="Texture2D" uid="uid://b58sjnl6n686d" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_tc2ef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e43mu"]
@@ -11,6 +11,7 @@ size = Vector2(22.7914, 22.2699)
 size = Vector2(20.5, 21)
 
 [node name="MagmaJimmy" type="CharacterBody2D"]
+collision_layer = 65
 script = ExtResource("1_mrb55")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
