@@ -1,9 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://rqh350ruhebr"]
+[gd_scene load_steps=6 format=3 uid="uid://rqh350ruhebr"]
 
 [ext_resource type="Script" path="res://scripts/characters/magma_jimmy.gd" id="1_mrb55"]
-[ext_resource type="Texture2D" uid="uid://b58sjnl6n686d" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
+[ext_resource type="Texture2D" uid="uid://bx7k0v55fstth" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
+[ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_tc2ef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e43mu"]
+size = Vector2(22.7914, 22.2699)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx5x3"]
+size = Vector2(20.5, 21)
 
 [node name="MagmaJimmy" type="CharacterBody2D"]
 script = ExtResource("1_mrb55")
@@ -16,3 +21,9 @@ texture = ExtResource("1_tsqe5")
 position = Vector2(0, -1)
 scale = Vector2(0.815, 0.815)
 shape = SubResource("RectangleShape2D_e43mu")
+
+[node name="DangerZone" parent="." instance=ExtResource("3_tc2ef")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DangerZone"]
+position = Vector2(-0.25, -1.5)
+shape = SubResource("RectangleShape2D_kx5x3")
