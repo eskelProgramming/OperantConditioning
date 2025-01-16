@@ -71,6 +71,7 @@ throw={
 2d_physics/layer_4="dynamic"
 2d_physics/layer_5="ground"
 2d_physics/layer_6="magma_jimmy_boundary"
+2d_physics/layer_7="enemies"
 
 [rendering]
 

@@ -11,6 +11,7 @@ size = Vector2(18, 13)
 size = Vector2(14.7855, 8.49409)
 
 [node name="BatwingBertha" type="CharacterBody2D"]
+collision_layer = 65
 motion_mode = 1
 script = ExtResource("1_0d4kd")
 

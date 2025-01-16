@@ -1,7 +1,7 @@
 class_name Mac
 extends CharacterBody2D
 
-@export var throw_speed = 100.0
+@export var throw_speed : float
 
 const SPEED = 250.0
 const JUMP_VELOCITY = -350.0

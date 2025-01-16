@@ -8,6 +8,7 @@ size = Vector2(16, 18)
 
 [node name="mac" type="CharacterBody2D"]
 script = ExtResource("1_q4o5q")
+throw_speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
