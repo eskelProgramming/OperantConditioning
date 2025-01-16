@@ -2,7 +2,7 @@ class_name Mac
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+const SPEED = 250.0
 const JUMP_VELOCITY = -350.0
 
 var can_control : bool = true
@@ -33,7 +33,7 @@ func handle_danger() -> void:
 	visible = false
 	can_control = false
 	
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.1).timeout
 	reset_mac()
 	
 func reset_mac() -> void:
