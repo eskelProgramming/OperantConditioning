@@ -40,7 +40,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func handle_danger() -> void:
-	print("mac died")
 	LifeManager.remove_lives(1)
 	visible = false
 	can_control = false
