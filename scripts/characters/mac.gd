@@ -45,7 +45,6 @@ func handle_danger() -> void:
 	visible = false
 	can_control = false
 	
-	await get_tree().create_timer(.1).timeout
 	reset_mac()
 	
 func reset_mac() -> void:

@@ -17,3 +17,4 @@ func game_over():
 	lives = 5
 	CoinManager.reset_coins()
 	LevelManager.reset_levels()
+	get_tree().change_scene_to_file("res://ui/scenes/game_over.tscn")
