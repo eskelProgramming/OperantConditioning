@@ -42,3 +42,9 @@ func get_level_data_by_id(id : int) -> LevelData:
 			level_to_return = lvl
 			
 	return level_to_return
+
+func reset_levels() :
+	for level in levels:
+		level.level_completed = false
+		level.level_unlocked = false
+	get_level_data_by_id(1).level_unlocked = true

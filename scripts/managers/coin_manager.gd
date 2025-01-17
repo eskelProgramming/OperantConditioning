@@ -11,3 +11,6 @@ func add_coins(num_coins_to_add : int) :
 	
 func remove_coins(num_coins_to_remove : int) :
 	coins -= num_coins_to_remove
+
+func reset_coins():
+	coins = 0
