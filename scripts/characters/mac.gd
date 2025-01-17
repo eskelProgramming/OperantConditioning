@@ -58,3 +58,6 @@ func throw_object():
 	throw_instance.global_position = global_position
 	var direction = (get_global_mouse_position() - global_position).normalized()
 	throw_instance.linear_velocity = direction * throw_speed
+	
+	await get_tree().create_timer(5).timeout
+	get_tree().queue_delete(throw_instance)
