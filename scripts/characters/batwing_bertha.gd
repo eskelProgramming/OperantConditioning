@@ -27,3 +27,6 @@ func _physics_process(delta):
 		# Check if the character has reached the target position
 		if global_position.distance_to(target_positions[current_target]) < 5:
 			current_target = (current_target + 1) % target_positions.size()
+
+func kill_batwing_bertha():
+	get_tree().queue_delete(self)

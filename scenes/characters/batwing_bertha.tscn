@@ -4,16 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://cbwr4uxaso1yn" path="res://Assets/characters/batwing_bertha/batwing_bertha_front.png" id="1_kcrwq"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_aybtc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbng0"]
-size = Vector2(18, 13)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gh6r"]
 size = Vector2(14.7855, 8.49409)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbng0"]
+size = Vector2(18, 13)
 
 [node name="BatwingBertha" type="CharacterBody2D"]
 collision_layer = 65
 motion_mode = 1
 script = ExtResource("1_0d4kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.51, -1.502)
+scale = Vector2(1.17, 1.17)
+shape = SubResource("RectangleShape2D_2gh6r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -24,8 +29,3 @@ texture = ExtResource("1_kcrwq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DangerZone"]
 position = Vector2(-1, -2.5)
 shape = SubResource("RectangleShape2D_xbng0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.51, -1.502)
-scale = Vector2(1.17, 1.17)
-shape = SubResource("RectangleShape2D_2gh6r")
