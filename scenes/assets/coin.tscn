@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rqqfag0dua0"]
+
+[ext_resource type="Texture2D" uid="uid://b3aaeliy4wooo" path="res://Assets/misc/coin.png" id="2_b1cre"]
+[ext_resource type="Script" path="res://scripts/assets/coin.gd" id="2_ci4gq"]
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("2_ci4gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_b1cre")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -4, 2, -4, 2, -3, 3, -3, 3, -2, 4, -2, 4, 2, 3, 2, 3, 3, 2, 3, 2, 4, -2, 4, -2, 3, -3, 3, -3, 2, -4, 2, -4, -2, -3, -2, -3, -3, -2, -3)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

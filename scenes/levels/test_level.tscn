@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dfmlhdxlly27y"]
+[gd_scene load_steps=10 format=4 uid="uid://dfmlhdxlly27y"]
 
 [ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_juv5w"]
 [ext_resource type="PackedScene" uid="uid://8yv7mac3vwdg" path="res://Assets/tile_map_layers/test_tile_map_layer.tscn" id="2_3nsqv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bnkn03qr2xh5" path="res://scenes/characters/batwing_bertha.tscn" id="5_u4g2p"]
 [ext_resource type="PackedScene" uid="uid://rqh350ruhebr" path="res://scenes/characters/magma_jimmy.tscn" id="6_ynhcb"]
 [ext_resource type="PackedScene" uid="uid://0rrg4cpox7t4" path="res://scenes/characters/bully.tscn" id="7_1puqa"]
+[ext_resource type="PackedScene" uid="uid://c5rqqfag0dua0" path="res://scenes/assets/coin.tscn" id="8_cmxlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlvp8"]
 size = Vector2(10488, 118)
@@ -64,3 +65,8 @@ speed = 30.0
 [node name="Bully" parent="." node_paths=PackedStringArray("mac") instance=ExtResource("7_1puqa")]
 position = Vector2(1445, 877)
 mac = NodePath("../mac")
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="coin" parent="Coins" instance=ExtResource("8_cmxlu")]
+position = Vector2(190, 858)
