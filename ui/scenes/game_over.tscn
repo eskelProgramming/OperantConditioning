@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://j4naa3xamv5g"]
+
+[ext_resource type="Script" path="res://ui/game_over.gd" id="1_7ydqn"]
+
+[node name="game_over" type="Node"]
+script = ExtResource("1_7ydqn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1127.0
+offset_top = -476.0
+offset_right = 2755.0
+offset_bottom = 2040.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 86
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="main_menu_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 56
+text = "Return to Main Menu"
+
+[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
