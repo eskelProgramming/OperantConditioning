@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 var can_move_left = true
 var can_move_right = true
+var hit_count = 0
 
 func _ready():
 	pass
@@ -23,3 +24,9 @@ func _physics_process(delta):
 		velocity.y = 60
 
 		move_and_slide()
+
+func add_hits(num_hits_to_add: int) :
+	hit_count += num_hits_to_add
+	
+	var scale_to_add = Vector2(scale) + Vector2(.1, .1)
+	scale = scale_to_add
