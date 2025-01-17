@@ -6,4 +6,5 @@ extends Node
 
 var level_data : LevelData
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	level_data = LevelManager.get_level_data_by_id(level_id)
