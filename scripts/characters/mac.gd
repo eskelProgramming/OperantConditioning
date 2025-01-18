@@ -3,11 +3,17 @@ extends CharacterBody2D
 
 @export var throw_speed : float
 
+@onready var pause_menu: Control = $Camera2D/pause_menu
+
 const SPEED = 250.0
 const JUMP_VELOCITY = -350.0
 
 var can_control : bool = true
 var is_slowing_time = false
+var is_paused : bool = false
+
+func _ready() -> void:
+	pause_menu.hide()
 
 func _physics_process(delta: float) -> void:
 	if not can_control: return
@@ -38,6 +44,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("pause"):
+		pause_menu_toggle()
+
+func pause_menu_toggle():
+	if is_paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+	is_paused = !is_paused
+	print("pause pressed, is_paused = %s" % is_paused)
 
 func handle_danger() -> void:
 	LifeManager.remove_lives(1)
