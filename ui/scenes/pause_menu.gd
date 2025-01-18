@@ -7,7 +7,8 @@ func _on_continue_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
-	pass # Replace with function body.
+	LevelManager.restart()
+	mac.pause_menu_toggle()
 
 
 func _on_options_pressed() -> void:

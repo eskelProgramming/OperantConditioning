@@ -42,3 +42,6 @@ func reset_levels() :
 		level.level_completed = false
 		level.level_unlocked = false
 	get_level_data_by_id(1).level_unlocked = true
+
+func restart():
+	load_level(loaded_level.level_id)

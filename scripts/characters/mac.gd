@@ -66,9 +66,7 @@ func handle_danger() -> void:
 	reset_mac()
 	
 func reset_mac() -> void:
-	global_position = LevelManager.loaded_level.level_start_position.global_position
-	visible = true
-	can_control = true
+	LevelManager.restart()
 
 func throw_object():
 	var throw_instance = preload("res://scenes/assets/wrench.tscn").instantiate()
