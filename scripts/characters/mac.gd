@@ -71,6 +71,7 @@ func reset_mac() -> void:
 	can_control = true
 
 func throw_object():
+	print("Throw speed : %s" % throw_speed)
 	var throw_instance = preload("res://scenes/assets/wrench.tscn").instantiate()
 	get_parent().add_child(throw_instance)
 	throw_instance.global_position = global_position
