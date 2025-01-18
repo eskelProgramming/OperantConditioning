@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnxjw21k22ird"]
+[gd_scene load_steps=3 format=3 uid="uid://ofkq824pkvrq"]
 
-[ext_resource type="Script" path="res://ui/scripts/pause_menu.gd" id="1_1gpat"]
+[ext_resource type="Script" path="res://ui/scenes/pause_menu.gd" id="1_a6lsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evbhk"]
 bg_color = Color(0, 0.784314, 0.729412, 0.317647)
@@ -9,19 +9,16 @@ corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
-[node name="pause_menu" type="Node"]
-process_mode = 2
-script = ExtResource("1_1gpat")
-
-[node name="pause_menu" type="Control" parent="."]
+[node name="pause_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a6lsw")
 
-[node name="margin_container" type="MarginContainer" parent="pause_menu"]
+[node name="margin_container" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,18 +30,18 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="inner_background" type="PanelContainer" parent="pause_menu/margin_container"]
+[node name="inner_background" type="PanelContainer" parent="margin_container"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_evbhk")
 
-[node name="inner_container" type="VBoxContainer" parent="pause_menu/margin_container/inner_background"]
+[node name="inner_container" type="VBoxContainer" parent="margin_container/inner_background"]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="Control2" type="Control" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="button_container" type="MarginContainer" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="button_container" type="MarginContainer" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 24
@@ -52,12 +49,12 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="continue" type="Button" parent="pause_menu/margin_container/inner_background/inner_container/button_container"]
+[node name="continue" type="Button" parent="margin_container/inner_background/inner_container/button_container"]
 layout_mode = 2
 theme_type_variation = &"custom_menu_button"
 text = "Continue"
 
-[node name="button_container2" type="MarginContainer" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="button_container2" type="MarginContainer" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 24
@@ -65,12 +62,12 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="restart" type="Button" parent="pause_menu/margin_container/inner_background/inner_container/button_container2"]
+[node name="restart" type="Button" parent="margin_container/inner_background/inner_container/button_container2"]
 layout_mode = 2
 theme_type_variation = &"custom_menu_button"
 text = "Restart"
 
-[node name="button_container3" type="MarginContainer" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="button_container3" type="MarginContainer" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 24
@@ -78,13 +75,13 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="options" type="Button" parent="pause_menu/margin_container/inner_background/inner_container/button_container3"]
+[node name="options" type="Button" parent="margin_container/inner_background/inner_container/button_container3"]
 layout_mode = 2
 theme_type_variation = &"custom_menu_button"
 text = "Options
 "
 
-[node name="button_container4" type="MarginContainer" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="button_container4" type="MarginContainer" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 24
@@ -92,11 +89,16 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="main_menu" type="Button" parent="pause_menu/margin_container/inner_background/inner_container/button_container4"]
+[node name="main_menu" type="Button" parent="margin_container/inner_background/inner_container/button_container4"]
 layout_mode = 2
 theme_type_variation = &"custom_menu_button"
 text = "Main Menu"
 
-[node name="Control" type="Control" parent="pause_menu/margin_container/inner_background/inner_container"]
+[node name="Control" type="Control" parent="margin_container/inner_background/inner_container"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[connection signal="pressed" from="margin_container/inner_background/inner_container/button_container/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="margin_container/inner_background/inner_container/button_container2/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="margin_container/inner_background/inner_container/button_container3/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="margin_container/inner_background/inner_container/button_container4/main_menu" to="." method="_on_main_menu_pressed"]

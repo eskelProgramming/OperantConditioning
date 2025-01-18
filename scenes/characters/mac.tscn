@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgrkxvfnxh4sd"]
+[gd_scene load_steps=5 format=3 uid="uid://dgrkxvfnxh4sd"]
 
 [ext_resource type="Script" path="res://scripts/characters/mac.gd" id="1_q4o5q"]
 [ext_resource type="Texture2D" uid="uid://bvlrgrb4s0uld" path="res://Assets/characters/mac/mac_front.png" id="2_eexpb"]
+[ext_resource type="PackedScene" uid="uid://ofkq824pkvrq" path="res://ui/scenes/pause_menu.tscn" id="3_kjl3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnj"]
 size = Vector2(16, 18)
 
 [node name="mac" type="CharacterBody2D"]
 script = ExtResource("1_q4o5q")
-throw_speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -24,3 +24,10 @@ zoom = Vector2(3.37, 3.37)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 rotation_smoothing_enabled = true
+
+[node name="pause_menu" parent="Camera2D" instance=ExtResource("3_kjl3v")]
+offset_left = -9.0
+offset_top = -10.0
+offset_right = -9.0
+offset_bottom = -10.0
+scale = Vector2(0.54, 0.54)
