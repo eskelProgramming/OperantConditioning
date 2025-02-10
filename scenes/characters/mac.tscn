@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnj"]
 size = Vector2(16, 18)
 
-[node name="mac" type="CharacterBody2D"]
+[node name="mac" type="CharacterBody2D" groups=["mac"]]
 script = ExtResource("1_q4o5q")
 throw_speed = 350.0
 
