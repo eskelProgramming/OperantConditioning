@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwtvbmo4vq0fk"]
+[gd_scene load_steps=5 format=3 uid="uid://cwtvbmo4vq0fk"]
 
-[ext_resource type="PackedScene" uid="uid://p3q3a0758w4g" path="res://Assets/tile_map_layers/world_1_final_tilemap.tscn" id="1_rkt2l"]
 [ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_xyabf"]
 [ext_resource type="PackedScene" uid="uid://dgrkxvfnxh4sd" path="res://scenes/characters/mac.tscn" id="2_agajq"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="4_qsd00"]
@@ -48,8 +47,6 @@ offset_left = 9440.0
 offset_right = 11352.0
 offset_bottom = 2360.0
 color = Color(1, 0.141176, 0.211765, 1)
-
-[node name="world_1" parent="." instance=ExtResource("1_rkt2l")]
 
 [node name="PlayerStart" type="Node2D" parent="."]
 position = Vector2(-672, -360)
