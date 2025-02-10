@@ -396,6 +396,7 @@ scenes/2/scene = ExtResource("4_r4f6v")
 scenes/3/scene = ExtResource("5_owjys")
 
 [sub_resource type="TileSet" id="TileSet_uy61b"]
+resource_local_to_scene = true
 physics_layer_0/collision_layer = 17
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
