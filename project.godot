@@ -28,6 +28,10 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+mac=""
+
 [gui]
 
 theme/custom="res://ui/themes/default.tres"
