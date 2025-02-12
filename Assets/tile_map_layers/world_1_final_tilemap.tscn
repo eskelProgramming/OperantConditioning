@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://p3q3a0758w4g"]
+[gd_scene load_steps=9 format=3 uid="uid://p3q3a0758w4g"]
 
 [ext_resource type="Texture2D" uid="uid://b3bppn8m1ipul" path="res://Assets/tilesets/world_1_final.png" id="1_mjt4c"]
 [ext_resource type="PackedScene" uid="uid://c5rqqfag0dua0" path="res://scenes/assets/coin.tscn" id="2_w6kaa"]
 [ext_resource type="PackedScene" uid="uid://0rrg4cpox7t4" path="res://scenes/characters/bully.tscn" id="3_yxo2p"]
-[ext_resource type="PackedScene" uid="uid://bnkn03qr2xh5" path="res://scenes/characters/batwing_bertha.tscn" id="4_r4f6v"]
 [ext_resource type="PackedScene" uid="uid://rqh350ruhebr" path="res://scenes/characters/magma_jimmy.tscn" id="5_owjys"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ns37n"]
@@ -392,7 +391,6 @@ scenes/1/scene = ExtResource("2_w6kaa")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8oxan"]
 resource_name = "enemies"
 scenes/1/scene = ExtResource("3_yxo2p")
-scenes/2/scene = ExtResource("4_r4f6v")
 scenes/3/scene = ExtResource("5_owjys")
 
 [sub_resource type="TileSet" id="TileSet_uy61b"]
