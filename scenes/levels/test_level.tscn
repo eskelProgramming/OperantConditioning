@@ -14,7 +14,6 @@ size = Vector2(10488, 118)
 
 [node name="test_level" type="Node2D" node_paths=PackedStringArray("level_start_position")]
 script = ExtResource("1_juv5w")
-level_id = 1
 level_start_position = NodePath("PlayerStart")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("2_3nsqv")]

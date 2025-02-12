@@ -9,9 +9,11 @@ var can_move_right = true
 var hit_count = 0
 
 func _ready():
-	pass
+	check_and_get_mac()
 
 func _physics_process(delta):
+	check_and_get_mac()
+	
 	if mac:
 		var direction = (mac.position - position).normalized()
 		# Adjust movement based on area collision detection
@@ -30,3 +32,7 @@ func add_hits(num_hits_to_add: int) :
 	
 	var scale_to_add = Vector2(scale) + Vector2(.1, .1)
 	scale = scale_to_add
+
+func check_and_get_mac() :
+	if (mac == null) :
+		mac = get_tree().get_nodes_in_group("mac")[0]
