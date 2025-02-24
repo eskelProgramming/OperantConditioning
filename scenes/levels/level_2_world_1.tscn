@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b3bppn8m1ipul" path="res://Assets/tilesets/world_1_final.png" id="3_oyd50"]
 [ext_resource type="PackedScene" uid="uid://c5rqqfag0dua0" path="res://scenes/assets/coin.tscn" id="4_04upc"]
 [ext_resource type="PackedScene" uid="uid://0rrg4cpox7t4" path="res://scenes/characters/bully.tscn" id="5_58ibs"]
-[ext_resource type="PackedScene" uid="uid://rqh350ruhebr" path="res://scenes/characters/magma_jimmy.tscn" id="6_8h2u7"]
+[ext_resource type="PackedScene" uid="uid://mhqfmllv8r5k" path="res://scenes/magma_jimmy.tscn" id="6_8h2u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ns37n"]
 texture = ExtResource("3_oyd50")
