@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b64eyyjve4cnh"]
+
+[node name="DevBackground" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 952.0
+offset_bottom = 1864.0
+color = Color(0.364706, 1, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 952.0
+offset_right = 1904.0
+offset_bottom = 1864.0
+color = Color(0.997301, 0.828845, 7.70092e-07, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 1904.0
+offset_right = 2856.0
+offset_bottom = 1864.0
+color = Color(0.997301, 0.828845, 7.70092e-07, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 2856.0
+offset_right = 3808.0
+offset_bottom = 1864.0
+color = Color(0.997301, 0.828845, 7.70092e-07, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 3808.0
+offset_right = 4760.0
+offset_bottom = 1864.0
+color = Color(1, 0, 0.0745098, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 4760.0
+offset_right = 5712.0
+offset_bottom = 1864.0
+color = Color(1, 0, 0.0745098, 1)
