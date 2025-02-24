@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cwtvbmo4vq0fk"]
+[gd_scene load_steps=16 format=4 uid="uid://cwtvbmo4vq0fk"]
 
 [ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_xyabf"]
 [ext_resource type="PackedScene" uid="uid://p3q3a0758w4g" path="res://Assets/tile_map_layers/world_1_final_tilemap.tscn" id="2_5w3oi"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0rrg4cpox7t4" path="res://scenes/characters/bully.tscn" id="5_10s7e"]
 [ext_resource type="PackedScene" uid="uid://bnkn03qr2xh5" path="res://scenes/characters/batwing_bertha.tscn" id="6_nnmy4"]
 [ext_resource type="PackedScene" uid="uid://rqh350ruhebr" path="res://scenes/characters/magma_jimmy.tscn" id="7_7tm5h"]
+[ext_resource type="PackedScene" uid="uid://o0uogo1at4mb" path="res://scenes/assets/goal_post.tscn" id="10_5ld6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ns37n"]
 texture = ExtResource("3_tqthx")
@@ -716,3 +717,7 @@ end_pos = NodePath("End")
 
 [node name="End" type="Node2D" parent="BatwingBerthas/BatwingBertha13/BatwingBertha28"]
 position = Vector2(64, 64)
+
+[node name="GoalPost" parent="." node_paths=PackedStringArray("level_to_load") instance=ExtResource("10_5ld6d")]
+position = Vector2(11080, 2104)
+level_to_load = NodePath("..")
