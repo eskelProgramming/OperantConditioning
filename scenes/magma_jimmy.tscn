@@ -18,4 +18,5 @@ polygon = PackedVector2Array(-8, 4, 5, 4, 5, 3, 7, 3, 7, -1, 6, -1, 6, -2, 5, -2
 [node name="DangerZone" parent="." instance=ExtResource("3_ybehi")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DangerZone"]
+scale = Vector2(1.2, 1.2)
 polygon = PackedVector2Array(-8, 4, 5, 4, 5, 3, 7, 3, 7, -1, 6, -1, 6, -2, 5, -2, 5, -5, 6, -5, 6, -7, 4, -7, 4, -8, -3, -8, -3, -7, -4, -7, -4, -5, -5, -5, -5, -3, -6, -3, -6, -2, -7, -2, -7, 0, -8, 0)
