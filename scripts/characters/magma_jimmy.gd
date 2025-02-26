@@ -2,10 +2,8 @@ class_name MagmaJimmy
 extends CharacterBody2D
 
 @export var mac : Mac
-@export var speed : float
+@export var speed : float = 30
 
-var can_move_left = true
-var can_move_right = true
 var hit_count = 0
 
 func _ready():
@@ -14,15 +12,12 @@ func _ready():
 func _physics_process(delta):
 	check_and_get_mac()
 	
+	move()
+		
+func move() :
 	if mac:
-		var direction = (mac.position - position).normalized()
-		# Adjust movement based on area collision detection
-		if direction.x < 0 and not can_move_left:
-			velocity.x = 0
-		elif direction.x > 0 and not can_move_right:
-			velocity.x = 0
-		else:
-			velocity.x = direction.x * speed
+		var direction = (mac.global_position - global_position).normalized()
+		velocity.x = direction.x * speed
 		velocity.y = 60
 
 		move_and_slide()
@@ -30,8 +25,8 @@ func _physics_process(delta):
 func add_hits(num_hits_to_add: int) :
 	hit_count += num_hits_to_add
 	
-	var scale_to_add = Vector2(scale) + Vector2(.1, .1)
-	scale = scale_to_add
+	var new_scale = Vector2(scale) + Vector2(.1, .1)
+	scale = new_scale
 
 func check_and_get_mac() :
 	if (mac == null) :

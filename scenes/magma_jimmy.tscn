@@ -1,21 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://rqh350ruhebr"]
+[gd_scene load_steps=4 format=3 uid="uid://mhqfmllv8r5k"]
 
-[ext_resource type="Script" path="res://scripts/characters/magma_jimmy.gd" id="1_mrb55"]
-[ext_resource type="Texture2D" uid="uid://b58sjnl6n686d" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
-[ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_tc2ef"]
+[ext_resource type="Script" path="res://scripts/characters/magma_jimmy.gd" id="1_6o0h5"]
+[ext_resource type="Texture2D" uid="uid://b58sjnl6n686d" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="2_6f0p2"]
+[ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_ybehi"]
 
 [node name="MagmaJimmy" type="CharacterBody2D"]
 collision_layer = 65
-script = ExtResource("1_mrb55")
+script = ExtResource("1_6o0h5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_tsqe5")
+texture = ExtResource("2_6f0p2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-8, 4, 5, 4, 5, 3, 7, 3, 7, -1, 6, -1, 6, -2, 5, -2, 5, -5, 6, -5, 6, -7, 4, -7, 4, -8, -3, -8, -3, -7, -4, -7, -4, -5, -5, -5, -5, -3, -6, -3, -6, -2, -7, -2, -7, 0, -8, 0)
 
-[node name="DangerZone" parent="." instance=ExtResource("3_tc2ef")]
+[node name="DangerZone" parent="." instance=ExtResource("3_ybehi")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DangerZone"]
+scale = Vector2(1.2, 1.2)
 polygon = PackedVector2Array(-8, 4, 5, 4, 5, 3, 7, 3, 7, -1, 6, -1, 6, -2, 5, -2, 5, -5, 6, -5, 6, -7, 4, -7, 4, -8, -3, -8, -3, -7, -4, -7, -4, -5, -5, -5, -5, -3, -6, -3, -6, -2, -7, -2, -7, 0, -8, 0)
