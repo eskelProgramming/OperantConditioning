@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy54m3snhvk7"]
+[gd_scene load_steps=7 format=3 uid="uid://cy54m3snhvk7"]
 
 [ext_resource type="Script" path="res://ui/scripts/main.gd" id="1_03jg4"]
 [ext_resource type="Script" path="res://scripts/classes/level_data.gd" id="2_i20n8"]
@@ -20,9 +20,17 @@ level_completed = false
 level_unlocked = false
 level_path = "level_1_world_1"
 
+[sub_resource type="Resource" id="Resource_xxvrf"]
+script = ExtResource("2_i20n8")
+level_id = 2
+level_name = "Level 2 World 1"
+level_completed = false
+level_unlocked = false
+level_path = "level_2_world_1"
+
 [node name="main" type="Node"]
 script = ExtResource("1_03jg4")
-available_levels = Array[ExtResource("2_i20n8")]([SubResource("Resource_iu4os"), SubResource("Resource_svrwi")])
+available_levels = Array[ExtResource("2_i20n8")]([SubResource("Resource_iu4os"), SubResource("Resource_svrwi"), SubResource("Resource_xxvrf")])
 
 [node name="main_menu" parent="." instance=ExtResource("3_a3b5v")]
 

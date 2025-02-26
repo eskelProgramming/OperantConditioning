@@ -424,10 +424,10 @@ tile_map_data = PackedByteArray("AACtAV4AAAAEAAMAAACtAV0AAAAEAAIAAACtAVwAAAAEAAI
 tile_set = SubResource("TileSet_be6x0")
 
 [node name="PlayerStart" type="Node2D" parent="."]
-position = Vector2(120, 1208)
+position = Vector2(16, 1208)
 
 [node name="mac" parent="." instance=ExtResource("2_5bt68")]
-position = Vector2(120, 1208)
+position = Vector2(16, 1208)
 
 [node name="DangerZone" parent="." instance=ExtResource("3_oe1mv")]
 position = Vector2(-8, 24)
