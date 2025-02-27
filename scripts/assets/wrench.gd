@@ -1,3 +1,5 @@
+class_name Wrench
+
 extends RigidBody2D
 
 func _integrate_forces(state):
@@ -15,3 +17,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	elif body is MagmaJimmy:
 		body.add_hits(1)
 		get_tree().queue_delete(self)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area is Coin:
+		area.collect_coin()

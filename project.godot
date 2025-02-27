@@ -84,6 +84,7 @@ pause={
 2d_physics/layer_5="ground"
 2d_physics/layer_6="magma_jimmy_boundary"
 2d_physics/layer_7="enemies"
+2d_physics/layer_8="coins"
 
 [rendering]
 
