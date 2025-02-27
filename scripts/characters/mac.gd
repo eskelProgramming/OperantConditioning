@@ -11,6 +11,7 @@ const JUMP_VELOCITY = -350.0
 var can_control : bool = true
 var is_slowing_time = false
 var is_paused : bool = false
+var can_throw : bool = true
 
 func _ready() -> void:
 	pause_menu.hide()
@@ -30,7 +31,11 @@ func _physics_process(delta: float) -> void:
 		Engine.time_scale = 1.0  # Restore normal time
 
 	if Input.is_action_just_pressed("throw"):
-		throw_object()
+		if can_throw: 
+			throw_object()
+			can_throw = false
+			await get_tree().create_timer(.25).timeout
+			can_throw = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
