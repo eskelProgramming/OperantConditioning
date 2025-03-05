@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://rqh350ruhebr"]
 
-[ext_resource type="Script" path="res://scripts/characters/magma_jimmy.gd" id="1_mrb55"]
+[ext_resource type="Script" uid="uid://duc0jcc50pxo" path="res://scripts/characters/magma_jimmy.gd" id="1_mrb55"]
 [ext_resource type="Texture2D" uid="uid://b58sjnl6n686d" path="res://Assets/characters/mamga_jimmy/magma_jimmy_front.png" id="1_tsqe5"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_tc2ef"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://br1n41kc3wyjc"]
 
 [ext_resource type="PackedScene" uid="uid://xj3m4tw8wm45" path="res://Assets/tile_map_layers/world_1_final_tilemap.tscn" id="1_8k1pc"]
-[ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_vjfph"]
+[ext_resource type="Script" uid="uid://cjofs8pje1u81" path="res://scripts/classes/level.gd" id="1_vjfph"]
 [ext_resource type="PackedScene" uid="uid://dgrkxvfnxh4sd" path="res://scenes/characters/mac.tscn" id="2_5bt68"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_oe1mv"]
 [ext_resource type="Texture2D" uid="uid://b3bppn8m1ipul" path="res://Assets/tilesets/world_1_final.png" id="3_oyd50"]

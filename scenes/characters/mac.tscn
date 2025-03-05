@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgrkxvfnxh4sd"]
 
-[ext_resource type="Script" path="res://scripts/characters/mac.gd" id="1_q4o5q"]
+[ext_resource type="Script" uid="uid://kfn14y1345t6" path="res://scripts/characters/mac.gd" id="1_q4o5q"]
 [ext_resource type="Texture2D" uid="uid://bvlrgrb4s0uld" path="res://Assets/characters/mac/mac_front.png" id="2_eexpb"]
 [ext_resource type="PackedScene" uid="uid://ofkq824pkvrq" path="res://ui/scenes/pause_menu.tscn" id="3_kjl3v"]
 
