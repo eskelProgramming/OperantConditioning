@@ -1,3 +1,5 @@
+## Represents a single Wrench. The Wrench can 
+## collect coins and do damage to enemies.
 class_name Wrench
 
 extends RigidBody2D
