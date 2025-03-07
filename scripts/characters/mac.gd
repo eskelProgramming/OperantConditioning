@@ -1,12 +1,22 @@
+## The main character of Operant Conditioning. 
+##
+## [Mac] takes in player input to move left, right, jump, slow engine time
+## and throw [Wrench]es one at a time. When the player collides with an enemy,
+## [method Mac.reset_mac] is called.
 class_name Mac
+
+# Inherits from [CharacterBody2D]
 extends CharacterBody2D
 
+## Controls the speed at which [Wrenches] are thrown. Can be manipulated
+## in the editor. 
 @export var throw_speed : float
 
+## A reference to a [PauseMenu] to allow [PauseMenu] interactions. 
 @onready var pause_menu: Control = $Camera2D/pause_menu
 
-const SPEED = 250.0
-const JUMP_VELOCITY = -350.0
+const SPEED : float = 250.0
+const JUMP_VELOCITY : float = -350.0
 
 var can_control : bool = true
 var is_slowing_time = false
