@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://0rrg4cpox7t4"]
 
 [ext_resource type="Texture2D" uid="uid://ccagxgl5pqivk" path="res://Assets/characters/bully/bully_front.png" id="1_jc7i3"]
-[ext_resource type="Script" uid="uid://f3o1sdo1yxtk" path="res://scripts/characters/bully.gd" id="1_qk22m"]
+[ext_resource type="Script" path="res://scripts/characters/bully.gd" id="1_qk22m"]
 [ext_resource type="PackedScene" uid="uid://mjgpyvymcvi1" path="res://scenes/levels/danger_zone.tscn" id="3_otxc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q4nol"]

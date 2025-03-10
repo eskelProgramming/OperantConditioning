@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5rqqfag0dua0"]
 
 [ext_resource type="Texture2D" uid="uid://b3aaeliy4wooo" path="res://Assets/misc/coin.png" id="2_b1cre"]
-[ext_resource type="Script" uid="uid://bydl3c3vbmk84" path="res://scripts/assets/coin.gd" id="2_ci4gq"]
+[ext_resource type="Script" uid="uid://dfytpwsh12pfd" path="res://scripts/assets/coin.gd" id="2_ci4gq"]
 
 [node name="Coin" type="Area2D"]
 collision_layer = 129
