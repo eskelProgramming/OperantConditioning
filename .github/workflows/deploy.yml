@@ -1,22 +1,15 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Build and Deploy to Pages
 
 env:
   GODOT_VERSION: 4.4
-  
-# Controls when the workflow will run
+
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   export-web:
     name: Web Export
@@ -40,17 +33,8 @@ jobs:
         run: |
           mkdir -v -p build/web
           godot -v --export "HTML5" ./build/web/index.html
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: web
-          path: build/web
-      # Installing rsync is needed in order to deploy to GitHub Pages. Without it, the build will fail.
-      - name: Install rsync 📚
-        run: |
-          apt-get update && apt-get install -y rsync
       - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: build/web # The folder the action should deploy.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
