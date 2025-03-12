@@ -11,35 +11,21 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    container:
-      image: docker pull barichello/godot-ci
-
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout source code
+        uses: actions/checkout@v3
 
-      - name: Move HTML5 templates into position
-        run: |
-          mkdir -v -p ~/.local/share/godot/export_templates
-          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
-      - name: Create staging directory
-        run: mkdir -v -p build/web
+      - name: Create export directory
+        run: mkdir html5
 
-      - name: Build
-        run: godot -v --export-release --headless "Web" ./build/web/index.html project/project.godot
+      - name: Create export_presets.cfg
+        run: cp $WORKING_DIRECTORY/export_presets.html.example $WORKING_DIRECTORY/export_presets.cfg
 
-      - name: Add coi-service-worker
-        run: |
-          git clone https://github.com/gzuidhof/coi-serviceworker.git
-          mv coi-serviceworker/coi-serviceworker.js build/web/coi-serviceworker.js
-          sed -i '3 i <script src="coi-serviceworker.js"></script>' build/web/index.html
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Godot HTML5 export
+        uses: dulvui/godot-4-html-export@v1.0.2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          working-directory: $WORKING_DIRECTORY
+          godot-version: 4.4
+          godot-channel: stable
