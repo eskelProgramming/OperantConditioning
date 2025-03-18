@@ -11,7 +11,7 @@ OperantConditioning is a 2D platformer game developed using the Godot engine. Th
 ## Mouse and Keyboard Controls
 
 - Move Left: A
-- Move Right: B
+- Move Right: D
 - Jump: Space
 - Aim (to throw a wrench): Mouse cursor
 - Slow time: Right Mouse Button
